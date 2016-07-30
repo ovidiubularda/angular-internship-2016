@@ -1,0 +1,158 @@
+
+#hero-banner {
+    margin-top: 70px;
+    padding-top: 100px;
+    height: 700px;
+    background-image: url('/assets/images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#hero-banner #banner-text {
+    text-align: center;
+}
+
+#hero-banner #banner-text h1 {
+    margin-top: 0;
+}
+
+#hero-banner #banner-text h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: lighter;
+
+}
+
+#hero-banner #banner-text h3 {
+    font-size: 25px;
+    color: white;
+    font-weight: lighter;
+
+}
+
+#hero-banner #banner-text a {
+    font-size: 25px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+#hero-banner .learn-more {
+    color: white;
+    background: transparent;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+#hero-banner .learn-more:hover {
+    background: #34b1c4;
+}
+.icon-cols{
+    padding-top: 40px;
+}
+.col-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.col-image a {
+    display: inline-block;
+    transition: all .2s ease-in-out;
+
+}
+
+.col-image a:hover {
+    transform: scale(1.1);
+    opacity: 0.3;
+}
+
+#section-one {
+    overflow: auto;
+    background-color: #34b1c4;;
+    color: white;
+    padding: 60px 20px;
+}
+
+#section-one h1 {
+    margin: 0;
+    font-weight: lighter;
+
+}
+
+#section-one h2 {
+    font-weight: lighter;
+}
+
+#section-one .icon-cols .image-wrapper {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+#section-one .icon-cols img {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+#section-one .icon-cols .user-icon {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+#section-two {
+    background-color: #393f43;
+    color: white;
+    padding: 10px 0 70px 0;
+}
+
+#section-two h1 {
+    padding: 20px 0;
+    margin: 0;
+
+}
+
+#section-two h4 {
+    font-weight: 400;
+
+}
+
+footer {
+    text-align: center;
+    height: 100px;
+    background: #fff;
+}
+
+footer .copyright-container, footer .back-to-top {
+    display: inline-block;
+}
+
+footer .back-to-top a {
+    color: #16A085;
+    opacity: 0.87;
+    margin-left: 10px;
+}
+
+footer .back-to-top a i {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+footer .back-to-top a i:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

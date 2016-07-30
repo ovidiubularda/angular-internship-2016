@@ -1,0 +1,15 @@
+.register-section {
+    background: #16A085;
+    opacity: 0.87;
+}
+
+
+.register {
+    width: 50%;
+    margin: auto;
+    text-align: right;
+}
+.q-form{
+    width: 50%;
+    margin:auto;
+}

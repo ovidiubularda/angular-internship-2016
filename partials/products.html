@@ -1,0 +1,120 @@
+<section class="main banner">
+    <div class="container text-center">
+        <h1> Shop</h1>
+    </div>
+</section>
+<section class="product-list" ng-controller="ProductsController">
+    <div class="container">
+        <div class="row">
+            <div class="products-description text-center">
+                <h1>Lorem Ipsum</h1>
+
+                <h4>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical
+                    Latin
+                    literature from 45 BC, making it over 2000 years old.</h4>
+
+            </div>
+            <div class="col-md-9">
+                <section id="product-list">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 product-box" ng-repeat="product in products | filter:{name: searchProductFilter}">
+                            <div class="product">
+                                <a ng-click="addToCart(product)" class="add-to-card">Add to cart</a>
+                                <span class="on-sale-bubble" ng-show="product.onSale">Sale!</span>
+                                <a href="/#/products/{{product.id}}">
+                                    <img ng-src="{{product.picture}}">
+                                </a>
+
+                                <div class="thumb-info">
+                                    <a href="#">
+                                        <h4>{{product.name}}</h4>
+                                        <h3>${{product.price}}</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <nav>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </section>
+            </div>
+            <div class="col-md-3">
+                <aside class="sidebar">
+                    <h4 class="aside-title">Search</h4>
+                    <input type="search" class="form-control search-input" placeholder="Search here" ng-model="searchProductFilter">
+
+                    <div>
+                        <ul class="top-rated">
+                            <li>
+                                <div class="row top-rated-product">
+                                    <div class="image-thumbnail col-sm-6">
+                                        <a href="#">
+                                            <img src="../assets/images/products/product-1.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="top-rated-details col-sm-6">
+                                        <p> Photo </p>
+
+                                        <div class="price">$79</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row top-rated-product">
+                                    <div class="image-thumbnail col-sm-6">
+                                        <a href="#">
+                                            <img src="../assets/images/products/product-2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="top-rated-details col-sm-6">
+                                        <p> Thing </p>
+
+                                        <div class="price">$19</div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row top-rated-product">
+                                    <div class="image-thumbnail col-sm-6">
+                                        <a href="#">
+                                            <img src="../assets/images/products/product-3.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="top-rated-details col-sm-6">
+                                        <p> Illustration </p>
+
+                                        <div class="price">$60</div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+</section>

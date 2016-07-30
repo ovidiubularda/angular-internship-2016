@@ -1,0 +1,72 @@
+<html ng-app="qshop">
+
+<head>
+    <title>Hi Summer Internship</title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="/css/products.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+    <link rel="stylesheet" type="text/css" href="/css/product.css">
+    <link rel="stylesheet" type="text/css" href="/css/cart.css">
+
+    <script src="assets/js/jquery-2.1.4.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="services/products.service.js"></script>
+    <script src="services/cart.service.js"></script>
+    <script src="controllers/products.controller.js"></script>
+    <script src="controllers/product.controller.js"></script>
+    <script src="controllers/cart.controller.js"></script>
+    <script src="controllers/menu.controller.js"></script>
+</head>
+
+<body id="top">
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header id='header'>
+            <nav class="navbar navbar-default navbar-fixed-top tall">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" data-target="#myNavbar" data-toggle="collapse" class="btn btn-default btn-lg navbar-toggle">
+                            <span class="glyphicon glyphicon-menu-hamburger " aria-hidden="true"></span>
+                        </button>
+                        <a href="/" class="navbar-brand">QShop</a>
+                    </div>
+                    <!-- Collection of nav links and other content for toggling -->
+                    <div id="myNavbar" class="collapse navbar-collapse" ng-controller="MenuController">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/#/products">Shop</a></li>
+                            <li><a href="/#/contact">Contact</a></li>
+                            <li><a href="/#/">About</a></li>
+                            <li><a href="/#/login">Login</a></li>
+                            <li>
+                                <a href="/#/cart">
+                                    <span class="badge" style="margin-right: 5px">{{totalProducts}}</span>Cart
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div ui-view></div>
+    </div>
+    <footer>
+        <div class="copyright-container">
+            <h1>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2016 Summer Fun</h1>
+        </div>
+        <div class="back-to-top">
+            <a href="#top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/*General*/
+* {
+    box-sizing: border-box;
+}
+html {
+    position: relative;
+}
+html body .page-wrapper {
+    min-height: 100%;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+
+/*Navbar*/
+
+.navbar.tall {
+    min-height: 70px;
+}
+#header a {
+    color: #393f43;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Main section spacing */
+.main {
+    margin-top: 70px;
+    padding-top: 70px;
+    padding-bottom: 150px;
+}
+
+/*Quantity input group*/
+
+.quantity .minus {
+    border-radius: 6px 0 0 6px;
+}
+.quantity .plus {
+    border-radius: 0  6px 6px 0 ;
+}
+.quantity .minus,
+.quantity .plus {
+    background: #E96546;
+    border: 1px solid #C8BFC6;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 17px;
+    font-weight: normal;
+    height: 34px;
+    line-height: 13px;
+    margin: 0;
+    overflow: visible;
+    outline: 0;
+    padding: 0;
+    float: left;
+    text-align: center;
+    width: 40px;
+}
+.quantity .input-text.qty {
+    border-width: 1px 0 1px 0;
+    border-color: #eee;
+    border-style: solid ;
+    box-shadow: none;
+    float: left;
+    height: 34px;
+    padding-left:10px;
+    text-align: center;
+    width: 35px;
+    font-size: 1em;
+}
+/*Orange button*/
+.btn-orange {
+    background: #E96546;
+    color: #fff;
+}
+/*Footer*/
+footer {
+    text-align: center;
+    clear: both;
+    position: absolute;
+    height: 90px;
+    bottom:0;
+    width: 100%;
+}
+
+footer .copyright-container, footer .back-to-top {
+    display: inline-block;
+}
+footer .back-to-top a {
+    color: #16A085;
+    opacity: 0.87;
+    margin-left: 10px;
+}
+footer .back-to-top a i {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+footer .back-to-top a i:hover{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

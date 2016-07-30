@@ -1,0 +1,98 @@
+.single-product {
+    padding-top: 90px;
+    padding-bottom: 150px;
+}
+
+.single-product .price {
+    color: #444;
+    font-size: 2em;
+    letter-spacing: -1px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.carousel img {
+    width: 100%;
+}
+.single-product .description{
+    color: #888;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+
+.quantity .minus {
+    border-radius: 6px 0 0 6px;
+}
+.quantity .plus {
+    border-radius: 0  6px 6px 0 ;
+}
+.quantity .minus,
+.quantity .plus {
+    background: #E96546;
+    border: 1px solid #C8BFC6;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 17px;
+    font-weight: normal;
+    height: 34px;
+    line-height: 13px;
+    margin: 0;
+    overflow: visible;
+    outline: 0;
+    padding: 0;
+    float: left;
+    text-align: center;
+    width: 40px;
+}
+.quantity .input-text.qty {
+    border-width: 1px 0 1px 0;
+    border-color: #eee;
+    border-style: solid ;
+    box-shadow: none;
+    float: left;
+    height: 34px;
+    padding-left:10px;
+    text-align: center;
+    width: 35px;
+    font-size: 1em;
+}
+.tabs {
+    margin-top: 35px ;
+}
+.tabs ul.nav-tabs {
+    border: 0;
+}
+.tabs ul.nav-tabs a {
+    border-radius: 6px 6px 0 0;
+    color: #e74c3c;
+    background: #F5F7F7;
+}
+.tabs ul.nav-tabs li.active a {
+    background: #FFF;
+    border: 0;
+    border-top: 3px solid #e74c3c;
+    border-radius: 6px;
+}
+.tabs .tab-pane {
+    padding-top: 30px;
+}
+.tabs .tab-content {
+    border: 0;
+    background-color: #FFF;
+    border-bottom: 3px solid #E5E7E9;
+    border-radius: 0 6px 6px 6px;
+    padding: 17px;
+}
+.tabs .tab-content > .active {
+    display: block;
+    background: #e96546;
+    color: #fff;
+    padding: 15px 23px;
+}
+.tabs .table {
+    color: #fff;
+}

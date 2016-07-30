@@ -1,0 +1,27 @@
+
+
+.login-section {
+    margin-top: 70px ;
+    padding: 70px 0 50px 0;
+    background: #16A085;
+    opacity: 0.87;
+}
+.q-form,
+.register-section{
+    width: 50%;
+    margin:auto;
+}
+.register-section {
+    text-align: right;
+    clear: both;
+}
+
+.q-form .inline-checkbox {
+    display: inline-block;
+    margin-left: 10px ;
+}
+/*Footer*/
+.btn.btn-register {
+    color: #fff;
+    font-weight: 900;
+}

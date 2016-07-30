@@ -1,0 +1,24 @@
+.cart-table a {
+    color: #444;
+}
+
+.product-image img {
+    height: 50px;
+    width: 50px;
+}
+
+.cart-table.table td {
+vertical-align: middle;
+}
+
+.cart-table .cart-actions {
+    text-align: right;
+}
+.shipping-costs .form-rows {
+    margin-bottom: 15px;
+}
+
+.cart-totals .card-total td {
+    font-size: 30px;
+    color: #E96546;
+}

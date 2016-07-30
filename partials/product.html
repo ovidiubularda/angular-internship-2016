@@ -1,0 +1,102 @@
+<section class="single-product" ng-init="loadProduct()" ng-controller="ProductController">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li ng-repeat="b in product.pictures" data-target="#carousel-example-generic"
+                        data-slide-to="{{$index}}" ng-class="{active:$first}">
+                        </li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item" ng-class="{active: $first}" ng-repeat="img in product.pictures">
+                            <img ng-src="{{img}}" alt="">
+                            <div class="carousel-caption">
+                                {{product.name}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" target="_self" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" target="_self" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="product-summary">
+                    <h2>
+                      {{product.name}}
+                    </h2>
+
+                    <div class="review-number">
+                        <span class="review-count">
+                          {{product.reviews ? product.reviews.length : 0}}
+                        </span> review(s)
+                    </div>
+                    <p class="price">
+                        ${{product.price}}
+                    </p>
+
+                    <p class="description">
+                        {{product.description}}
+                    </p>
+
+                    <form method="post" class="add-to-cart">
+                        <div class="row">
+                            <div class="quantity clearfix col-xs-6 col-sm-6 col-md-4">
+                                <input ng-click="decrementQuantity()"  type="button" class="minus" value="-">
+                                <input ng-model="quantity" type="number" class="input-text qty text" title="Qty" value="1" id="qty" name="quantity">
+                                <input ng-click="incrementQuantity()" type="button" class="plus" value="+">
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3">
+                                <button type="button" class="btn btn-primary" id="addToCart" ng-click="addToCart()">Add to cart</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tabs">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a data-target="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
+                <li role="presentation"><a data-target="#specifications" aria-controls="specifications" role="tab" data-toggle="tab">Specifications</a></li>
+                <li role="presentation"><a data-target="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="description">
+                    {{product.description}}
+                </div>
+                <div role="tabpanel" class="tab-pane" id="specifications">
+                    <div class="table-responsive table-bordered">
+                        <table class="table">
+                            <tbody>
+                                <tr ng-repeat="spec in product.specifications">
+                                    <th>{{spec.label}}</th>
+                                    <td>{{spec.value}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="reviews">
+                    <div ng-repeat="rev in product.reviews">
+                        {{rev.name}}: {{rev.text}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
